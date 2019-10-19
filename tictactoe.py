@@ -25,6 +25,15 @@ class TicTacToeBoard:
 
             if len(vals) == 1 and self.board[0][x] == player: 
                 return True
+        
+        if len(set(self.board[0][0], self.board[1][1], self.board[2][2])) == 1 and self.board[1][1] == player:
+            return True
+
+        if len(set(self.board[0][2], self.board[1][1], self.board[2][0])) == 1 and self.board[1][1] == player:
+            return True
+        
+        return False
+
 
         
 
